@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upwork Proposal Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Proposal Generator</h1>
+      <p class="subtitle">Paste job description, get a winning proposal</p>
+    </header>
+
+    <div class="api-section">
+      <label for="apiKey">Gemini API Key</label>
+      <div class="api-row">
+        <input type="password" id="apiKey" placeholder="Enter your Gemini API key">
+        <button id="saveKey" class="btn-save">Save</button>
+      </div>
+      <span id="keyStatus" class="key-status"></span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="input-section">
+      <label for="jobDesc">Job Description</label>
+      <textarea id="jobDesc" rows="8" placeholder="Paste the Upwork job description here..."></textarea>
+    </div>
+
+    <button id="generateBtn" class="btn-generate">
+      <span id="btnText">Generate Proposal</span>
+      <span id="btnLoader" class="loader hidden"></span>
+    </button>
+
+    <div id="resultSection" class="result-section hidden">
+      <div class="result-header">
+        <label>Your Proposal</label>
+        <button id="copyBtn" class="btn-copy">Copy</button>
+      </div>
+      <div id="proposalOutput" class="proposal-output"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
